@@ -1,0 +1,235 @@
+/* Resetando margens e padding */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+
+/* Corpo e fonte base */
+    body {
+        font-size: 'Poppins' sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+        padding-top: 60px; /* Espaço para o header fixo */
+        
+        background-image: url("https://alessandrafaria.com/wp-content/uploads/2022/07/shutterstock_1011769984-scaled.jpg");
+        background-attachment: fixed;
+        background-size:cover ;
+        background-position: center;
+    }
+
+/* Header fixo com fundo elegante */
+    header {
+        background-color: #ff6b81; /* Cor vibrante para destacar */
+        color: white;
+        position: fixed; /* Mantém fixo no topo */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        padding: 15px 0;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        z-index:1000; /* Garante que fique sobre outros elementos */
+    }
+    
+    header h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 2px      ;
+    }
+
+/* Navegação */
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+        display: inline;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+        padding: 10px 15px;
+    }
+
+    nav ul li a:hover {
+        background: white;
+        color: #ff6b81;/* Cor de destaque */
+        border-radius: 5px;
+    }
+    
+    
+    main {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Estilo das seções */
+    section {
+        width: 70%;
+        padding: 30px 20px;
+        margin: 20px auto;
+        text-align: center;
+        padding-top: 130px;
+        margin-top: 80px;
+    }
+
+    section p {
+        font-size: 20px;
+    }
+
+    section h3, ul {
+        padding-top: 20px;
+    }
+    section ul li:hover{
+        font-size: 23px;
+        font-weight: bold;
+    } 
+
+/* Estilo Seção Promoções */
+    #promocoes {
+        background: linear-gradient(135deg, #ff8a00, #e52e71);
+        color: white;
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+    .promo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding-top: px;
+    }
+    .promo {
+        background: white;
+        color:#333;
+        padding: 20px;
+        border-radius: 10px;
+        width: 280px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .promo h3 {
+        margin-bottom: 10px;
+    }
+    .promo p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .promo button {
+        background: #e52e71;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .promo button:hover {
+        background: #ff8a00;
+    }
+    .promo-relampago {
+        background: white;
+        color:#333;
+        padding: 20px;
+        border-radius: 10px;
+        width: 280px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        margin: 10px auto;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .promo-relampago button {
+        background: #e52e71;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+/* Galeria com grid */
+    #galeria .image-galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+        justify-items: center;
+    }
+
+    #galeria img {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    #galeria img:hover {
+        transform: scale(1.05);
+    }
+
+    #whatsapp-icon {
+        position:fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+    #whatsapp-icon img {
+        width: 60px;
+        height: 60px;
+        border-radius: 60%;
+        background-color: #25D366;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+/* Rodapé */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+/* Responsividade */
+    @media(max-width:768px){
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        nav {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        nav ul {
+            align-items: center;
+
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        main {
+            padding-top: 220px;
+        }
+    }
